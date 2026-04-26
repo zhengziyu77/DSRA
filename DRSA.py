@@ -46,7 +46,6 @@ class DRSA:
         node_types = list(X_dict.keys())
 
 
-        # ===== 初始化 =====
         for t in node_types:
             n, d = X_dict[t].shape
 
@@ -71,12 +70,8 @@ class DRSA:
                 self.E_dict[t] = np.random.randn(n, self.k) * 0.01
                 self.H_dict[t] = self.E_dict[t]
 
-        # ===== 训练 =====
         for it in range(self.n_iter):
 
-            # =========================
-            # Step 1: 更新 H (ALS)
-            # =========================
             for t in node_types:
                 k = self.k
                 n = self.H_dict[t].shape[0]
@@ -125,7 +120,6 @@ class DRSA:
                 except:
                     H_target = np.linalg.lstsq(coeff, rhs, rcond=None)[0].T
 
-                # 残差分解
                 if self.has_feat[t]:
                     P = self._X_pinv_cache[t] @ (H_target - self.E_dict[t])
                     X_proj = X_dict[t] @ P
