@@ -15,7 +15,6 @@ Here is a complete example of how to align a heterogeneous graph using DRSA. We 
 ```python
 import torch
 import numpy as np
-from drsa import DRSA, edge_index_dict_to_R_dict  # Assuming your code is in dsra.py
 
 # 1. Create dummy heterogeneous graph data (e.g., Academic Network)
 num_authors = 100
