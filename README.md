@@ -77,5 +77,22 @@ The `fit` function iteratively updates the aligned representations in two phases
 1. **Structure-Driven Estimation:** Updates the unified latent feature $H$ using the relational topology and dual-relational operators via Alternating Least Squares.
 2. **Feature Decomposition:** Decomposes the updated target into a semantic projection ($X \cdot P$) and a structural residual ($E$) using Ridge Regression.
 
+## Citation
+
+If you find this repository or our work useful in your research, please consider citing our paper:
+
+**Empowering Heterogeneous Graph Foundation Models via Decoupled Relation Alignment**  
+arXiv: [2605.00731](https://arxiv.org/abs/2605.00731)
+
+```bibtex
+@article{drsa,
+  title={Empowering Heterogeneous Graph Foundation Models via Decoupled Relation Alignment},
+  author={Ziyu Zheng, Yaming Yang, Zhe Wang, Ziyu Guan, Wei Zhao},
+  journal={arXiv preprint arXiv:2605.00731},
+  year={2026},
+  url={https://arxiv.org/abs/2605.00731}
+}
+
+
 
 
